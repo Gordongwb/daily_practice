@@ -1,10 +1,16 @@
 # -*- coding: UTF-8 -*-
 
 import random
-
-def _key():
+"""
+num     48-57
+upperC  65-90
+lowerC  97-112
+"""
+Length = 10
+Num = 5
+def create_key():
     key = ""
-    for i in range(8):
+    for i in range(Length):
         x = random.randint(0,61)
         if x < 10:
             x = x + 48
@@ -14,8 +20,10 @@ def _key():
             x = x + 61
         key = key + chr(x)
     return key
+def main():
+    key_list = []
+    for i in range(Num):
+        key_list.append(create_key())
+    print(key_list)
 
-key_list = []
-
-for i in range(10):
-    key_list.append(_key())
+main()
