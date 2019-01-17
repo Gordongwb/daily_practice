@@ -3,6 +3,7 @@
 from PIL import Image,ImageDraw,ImageFont
 
 resource = input('请输入图片位置:')
+#只能用绝对路径···
 # 处理windows文件位置中'\'的问题
 for i in resource :
     if i == '\\' :
